@@ -1,6 +1,7 @@
 <?php
 // In this file start application
+require './models/bootcamp.model.php';
 
-echo "Hello World!";
+$bootcamp = new Bootcamp();
 
 ?>
