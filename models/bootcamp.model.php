@@ -28,6 +28,19 @@
             }
             return $bootcamps;
         }
+
+        public function add_bootcamp($title, $description, $start_bootcamp, $end_bootcamp, $modules){
+            //CREAMOS LA CONSULTA
+            $sql = "INSERT INTO bootcamps(title, description, start_bootcamp, end_bootcamp, modules)";
+            VALUES('$title', '$description', '$start_bootcamp', '$end_bootcamp', '$modules');
+
+            $result = $this->conn->query($sql);
+            if ($result){
+                echo "New bootcamp has been added";
+            } else {
+                echo "Error creating new bootcamp";
+            }
+        }
     }
 
 ?>
